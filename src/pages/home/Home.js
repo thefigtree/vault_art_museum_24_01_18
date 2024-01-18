@@ -1,3 +1,3 @@
 export const Home = () => {
-  return <div>Vault Art Museum</div>;
+  return <div>금고미술관</div>;
 };
