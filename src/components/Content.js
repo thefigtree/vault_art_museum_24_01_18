@@ -8,9 +8,14 @@ const SContent = styled.div`
   font-size: 30px;
 `;
 
-export const Content = () => {
+export const Content = ({ isDark }) => {
   return (
-    <SContent>
+    <SContent
+      style={{
+        backgroundColor: isDark ? "black" : "white",
+        color: isDark ? "white" : "black",
+      }}
+    >
       <p>Vault Art Museum에 오신 걸 환영합니다.</p>
     </SContent>
   );

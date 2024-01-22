@@ -9,9 +9,14 @@ const SHeader = styled.header`
   align-items: center;
 `;
 
-export const Header = () => {
+export const Header = ({ isDark }) => {
   return (
-    <SHeader>
+    <SHeader
+      style={{
+        backgroundColor: isDark ? "black" : "lightgray",
+        color: isDark ? "white" : "black",
+      }}
+    >
       <h1>Vault Art Museun</h1>
     </SHeader>
   );

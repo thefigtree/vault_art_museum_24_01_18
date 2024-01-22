@@ -13,10 +13,18 @@ const SFooter = styled.footer`
   }
 `;
 
-export const Footer = () => {
+export const Footer = ({ isDark, setIsDark }) => {
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+  };
+
   return (
-    <SFooter>
-      <button>Dark Mode</button>
+    <SFooter
+      style={{
+        backgroundColor: isDark ? "black" : "lightgray",
+      }}
+    >
+      <button onClick={toggleTheme}>Dark Mode</button>
     </SFooter>
   );
 };
