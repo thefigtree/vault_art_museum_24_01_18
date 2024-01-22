@@ -1,3 +1,13 @@
+import { Content } from "../../components/Content";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+
 export const Home = () => {
-  return <div>금고미술관</div>;
+  return (
+    <div>
+      <Header></Header>
+      <Content></Content>
+      <Footer></Footer>
+    </div>
+  );
 };
