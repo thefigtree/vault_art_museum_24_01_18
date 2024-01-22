@@ -10,13 +10,13 @@ const SHome = styled.div`
   flex-direction: column;
 `;
 
-export const Home = ({ isDark, setIsDark }) => {
+export const Home = () => {
   return (
     <div>
       <SHome>
-        <Header isDark={isDark}></Header>
-        <Content isDark={isDark}></Content>
-        <Footer isDark={isDark} setIsDark={setIsDark}></Footer>
+        <Header></Header>
+        <Content></Content>
+        <Footer></Footer>
       </SHome>
     </div>
   );

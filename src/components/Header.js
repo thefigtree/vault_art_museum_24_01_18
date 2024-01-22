@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { ThemeContext } from "../context/ThemeContext";
 
 const SHeader = styled.header`
   width: 100%;
@@ -9,7 +11,9 @@ const SHeader = styled.header`
   align-items: center;
 `;
 
-export const Header = ({ isDark }) => {
+export const Header = () => {
+  const { isDark } = useContext(ThemeContext);
+
   return (
     <SHeader
       style={{

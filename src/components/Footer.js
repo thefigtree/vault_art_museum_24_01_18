@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { ThemeContext } from "../context/ThemeContext";
 
 const SFooter = styled.footer`
   width: 100%;
@@ -13,7 +15,9 @@ const SFooter = styled.footer`
   }
 `;
 
-export const Footer = ({ isDark, setIsDark }) => {
+export const Footer = () => {
+  const { isDark, setIsDark } = useContext(ThemeContext);
+
   const toggleTheme = () => {
     setIsDark(!isDark);
   };

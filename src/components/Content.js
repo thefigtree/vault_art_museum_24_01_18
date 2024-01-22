@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { ThemeContext } from "../context/ThemeContext";
 
 const SContent = styled.div`
   flex: 1;
@@ -8,7 +10,9 @@ const SContent = styled.div`
   font-size: 30px;
 `;
 
-export const Content = ({ isDark }) => {
+export const Content = () => {
+  const { isDark } = useContext(ThemeContext);
+
   return (
     <SContent
       style={{
