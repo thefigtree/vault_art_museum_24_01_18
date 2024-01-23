@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Content } from "../../components/Content";
-import { Footer } from "../../components/Footer";
+
 import { Header } from "../../components/Header";
 
 const SHome = styled.div`
@@ -16,7 +16,6 @@ export const Home = () => {
       <SHome>
         <Header></Header>
         <Content></Content>
-        <Footer></Footer>
       </SHome>
     </div>
   );
