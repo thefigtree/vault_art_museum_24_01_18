@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styled from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -52,12 +52,34 @@ const ShortMenuBtn = styled.div`
   border-radius: 2px 0px 0px 2px;
 `;
 
+const HiddenMenu = styled.nav`
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: ${(props) => props.$isActive};
+  transition: all 2s;
+  /* opacity: 0.8; */
+`;
+
+const Close = styled.div`
+  width: 50px;
+  height: 50px;
+  background-color: rebeccapurple;
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
+
 export const Header = () => {
   const { isDark, setIsDark } = useContext(ThemeContext);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
   };
+
+  const [active, setActive] = useState("100%");
 
   return (
     <SHeader
@@ -68,7 +90,7 @@ export const Header = () => {
     >
       <button onClick={toggleTheme}>Dark Mode</button>
       <h1>Vault Art Museum</h1>
-      <MenuBtn>
+      <MenuBtn onClick={() => setActive("0")}>
         <LongMenuBtn
           style={{ backgroundColor: isDark ? "white" : "black" }}
         ></LongMenuBtn>
@@ -76,6 +98,10 @@ export const Header = () => {
           style={{ backgroundColor: isDark ? "white" : "black" }}
         ></ShortMenuBtn>
       </MenuBtn>
+
+      <HiddenMenu $isActive={active}>
+        <Close onClick={() => setActive("100%")}></Close>
+      </HiddenMenu>
     </SHeader>
   );
 };
