@@ -59,17 +59,19 @@ const HiddenMenu = styled.nav`
   position: absolute;
   top: 0;
   left: ${(props) => props.$isActive};
-  transition: all 2s;
-  /* opacity: 0.8; */
+  transition: all 1.5s;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
 `;
 
 const Close = styled.div`
   width: 50px;
   height: 50px;
   background-color: rebeccapurple;
-  position: absolute;
-  top: 0;
-  right: 0;
+  /* position: absolute; */
+  /* top: 0;
+  right: 0; */
 `;
 
 export const Header = () => {
@@ -82,26 +84,28 @@ export const Header = () => {
   const [active, setActive] = useState("100%");
 
   return (
-    <SHeader
-      style={{
-        backgroundColor: isDark ? "black" : "white",
-        color: isDark ? "white" : "black",
-      }}
-    >
-      <button onClick={toggleTheme}>Dark Mode</button>
-      <h1>Vault Art Museum</h1>
-      <MenuBtn onClick={() => setActive("0")}>
-        <LongMenuBtn
-          style={{ backgroundColor: isDark ? "white" : "black" }}
-        ></LongMenuBtn>
-        <ShortMenuBtn
-          style={{ backgroundColor: isDark ? "white" : "black" }}
-        ></ShortMenuBtn>
-      </MenuBtn>
+    <div>
+      <SHeader
+        style={{
+          backgroundColor: isDark ? "black" : "white",
+          color: isDark ? "white" : "black",
+        }}
+      >
+        <button onClick={toggleTheme}>Dark Mode</button>
+        <h1>Vault Art Museum</h1>
+        <MenuBtn onClick={() => setActive("0")}>
+          <LongMenuBtn
+            style={{ backgroundColor: isDark ? "white" : "black" }}
+          ></LongMenuBtn>
+          <ShortMenuBtn
+            style={{ backgroundColor: isDark ? "white" : "black" }}
+          ></ShortMenuBtn>
+        </MenuBtn>
 
-      <HiddenMenu $isActive={active}>
-        <Close onClick={() => setActive("100%")}></Close>
-      </HiddenMenu>
-    </SHeader>
+        <HiddenMenu $isActive={active}>
+          <Close onClick={() => setActive("100%")}></Close>
+        </HiddenMenu>
+      </SHeader>
+    </div>
   );
 };
