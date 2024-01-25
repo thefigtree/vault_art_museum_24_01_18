@@ -14,9 +14,13 @@ const SContent = styled.div`
 `;
 
 const Con = styled.div`
-  width: 25%;
+  width: 33.333%;
   /* flex-direction: column; */
   /* justify-content: space-between; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const Title = styled.h3``;
