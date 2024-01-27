@@ -21,11 +21,16 @@ const Con = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-right: 2px solid gray;
 `;
 
-const Title = styled.h3``;
+const Title = styled.h3`
+  padding-bottom: 100px;
+`;
 
-const Desc = styled.p``;
+const Desc = styled.p`
+  padding-bottom: 100px;
+`;
 
 const Part = styled.h2``;
 
