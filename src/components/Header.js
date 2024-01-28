@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const SHeader = styled.header`
   width: 100%;
@@ -68,7 +70,10 @@ const HiddenMenu = styled.nav`
 const Close = styled.div`
   width: 50px;
   height: 50px;
-  background-color: rebeccapurple;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* position: absolute; */
   /* top: 0;
   right: 0; */
@@ -103,7 +108,12 @@ export const Header = () => {
         </MenuBtn>
 
         <HiddenMenu $isActive={active}>
-          <Close onClick={() => setActive("100%")}></Close>
+          <Close onClick={() => setActive("100%")}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              style={{ fontSize: "50px", color: "white" }}
+            ></FontAwesomeIcon>
+          </Close>
         </HiddenMenu>
       </SHeader>
     </div>
