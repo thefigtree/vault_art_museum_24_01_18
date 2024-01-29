@@ -22,17 +22,36 @@ const Con = styled.div`
   align-items: center;
   flex-direction: column;
   border-right: 2px solid gray;
+  /* border-left: 2px solid gray; */
+  /* box-sizing: border-box; */
 `;
 
 const Title = styled.h3`
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
+  /* padding-bottom: 50px; */
+  /* margin-top: 0px; */
+
+  font-size: 25px;
+  /* letter-spacing: -3px; */
+  /* background-color: aqua; */
 `;
 
 const Desc = styled.p`
-  padding-bottom: 100px;
+  /* margin: 0 auto; */
+  margin-bottom: 100px;
+  padding-top: 150px;
+  /* background-color: aqua; */
+  font-size: 18px;
+  line-height: 26px;
+  /* text-align: center; */
+  /* line-height: 2em; */
 `;
 
-const Part = styled.h2``;
+const Part = styled.h2`
+  font-size: 300px;
+  /* background-color: aqua; */
+  /* padding-top: 200px; */
+`;
 
 export const Content = () => {
   const { isDark } = useContext(ThemeContext);
@@ -47,7 +66,7 @@ export const Content = () => {
         {contentsApi.map((con) => (
           <Con key={con.id}>
             <Title>{con.title}</Title>
-            <Desc>{con.desc}</Desc>
+            <Desc>{con.desc.slice(0, 40) + "..."}</Desc>
             <Part>{con.part}</Part>
           </Con>
         ))}

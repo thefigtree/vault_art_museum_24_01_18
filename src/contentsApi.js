@@ -1,20 +1,20 @@
 export const contentsApi = [
   {
     id: 0,
-    title: "Stories about the Nature That Exists but Is Not Recognized",
-    desc: ": 존재하지만 잘 인식하지 못하는 자연 이야기",
+    title: "존재하지만 잘 인식하지 못하는 자연 이야기",
+    desc: "인간과 함께 살아가고 있지만 잘 드러나지 않고, 인식하지 못하는 부산의 자연환경을 살펴본다.",
     part: 1,
   },
   {
     id: 1,
-    title: "Stories of the Old Parts of Town That Are Private and Disappearing",
-    desc: ": 사라지고 있는 내밀한 원도심의 이야기",
+    title: "사라지고 있는 내밀한 원도심의 이야기",
+    desc: "개발이라는 이름 아래 기능을 상실하거나 쓸모없이 버려지는 사물을 오브제로 바라보았다. 버려진 사물을 창작의 소재 또는 모티브로 삼아 예술 작품으로 탄생시킴으로써 원도심 문화에 담긴 가치와 가능성의 흔적을 밀도 있게 들여다본다.",
     part: 2,
   },
   {
     id: 2,
-    title: "Private Stories Hidden but Not Frivolous",
-    desc: ": 숨겨져 있지만 가볍지 않은 사적 이야기",
+    title: "숨겨져 있지만 가볍지 않은 사적 이야기",
+    desc: "부산에 살면서 체험했던 작가의 개인 생애사, 가족의 삶의 이야기를 고찰하고 청년 예술가의 삶을 다채롭게 해석한다.",
     part: 3,
   },
 ];
