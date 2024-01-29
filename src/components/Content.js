@@ -61,6 +61,7 @@ export const Content = () => {
       <SContent
         style={{
           backgroundColor: isDark ? "black" : "white",
+          color: isDark ? "white" : "black",
         }}
       >
         {contentsApi.map((con) => (
